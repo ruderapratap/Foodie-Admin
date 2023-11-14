@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/customerName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_name"
+                android:textColor="@color/dark_black"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payment"
+                android:textColor="#b3b3b3"
+                android:layout_below="@id/customerName"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/money_status"
+                android:layout_below="@id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/not_received"
+                android:textColor="#FF5722"
+                android:textSize="18sp"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivered"
+                    android:textColor="@color/dark_black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/open_sans_samibold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardStatus"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:backgroundTint="@color/green"
+                    app:cardCornerRadius="22dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

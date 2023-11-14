@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="60dp"
+        app:lottie_rawRes="@raw/animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/animation_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/foddie_hut"
+        android:textColor="@color/green"
+        android:textSize="25sp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/lottieView"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_dashboard"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/animation_demo"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="200dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="70dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/spCard"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:elevation="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_rawRes="@raw/animation"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/spDeveloped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developed_by"
+                android:textColor="@color/light_black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/spName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rudera"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:fontFamily="@font/open_sans_samibold"
+                android:textStyle="bold"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</RelativeLayout>

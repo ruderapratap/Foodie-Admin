@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context=".Activity.AddItemActivity">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/backarrow_ic"
+                    android:tint="@color/green"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/tranparent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/spName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_item"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/green"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/open_sans_samibold"
+                    android:textStyle="bold"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="@string/enter_food_name"
+                android:textColorHint="#858781"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_foodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_samibold"
+                    android:maxWidth="550dp"
+                    android:maxLines="3"
+                    android:textColor="@color/dark_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="@string/enter_food_price"
+                android:textColorHint="#858781"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_foodPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_samibold"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/dark_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/selectImage"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:text="@string/select_food_image"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:drawableRight="@drawable/add_menu_ic"
+                android:paddingEnd="20dp"
+                android:textColor="@color/light_black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_samibold"
+                android:drawableTint="@color/green"
+                android:background="@drawable/bg_edit"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="270dp"
+                android:layout_height="170dp"
+                android:elevation="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="15dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/foodImagePl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_ic"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/short_description"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_black"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:minHeight="57dp"
+                android:paddingStart="10dp"
+                android:hint="@string/add_here_description"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/bg_edit2"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredient"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_black"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+            <EditText
+                android:id="@+id/et_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:minHeight="57dp"
+                android:background="@drawable/bg_edit2"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:hint="@string/add_here_ingredient"
+                android:paddingTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/open_sans_samibold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addItem_btn"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/lg4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/greenbuttongradiant"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/add_item"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
